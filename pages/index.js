@@ -1,7 +1,19 @@
 import Head from 'next/head'
+import { useEffect } from 'react';
+import axios from 'axios';
 import styles from '../styles/Home.module.css'
+import { apiGet } from './api/solicitantes.js'
 
 export default function Home() {
+  const url = 'http://localhost:8080/solicitante/brauiloelias6@gmail.com';
+  
+  useEffect(async () =>{
+    const result = await axios(
+      url,
+    );
+    console.log(result);
+  });
+
   return (
     <div className={styles.container}>
       <Head>
