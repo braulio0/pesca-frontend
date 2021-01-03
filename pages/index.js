@@ -1,65 +1,17 @@
 import Head from 'next/head'
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import axios from 'axios';
 import styles from '../styles/Home.module.css'
-import { apiGet } from './api/solicitantes.js'
+import Test from './Test.js'
 
-export default function Home() {
-  const url = 'http://localhost:8080/solicitante/brauiloelias6@gmail.com';
-  
-  useEffect(async () =>{
-    const result = await axios(
-      url,
-    );
-    console.log(result);
-  });
-
-  return (
+const Home = () => {
+  //const url = `http://localhost:8080/solicitante/${user}`;
+    return (
     <div className={styles.container}>
-      <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
       <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
-
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
-
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
-        </div>
+        <h1> Hello </h1>
+        <Test users = { 'brauiloelias6@gmail.com' } / >
+          <h1> test </h1>
       </main>
 
       <footer className={styles.footer}>
@@ -75,3 +27,4 @@ export default function Home() {
     </div>
   )
 }
+export default Home;
