@@ -1,9 +1,8 @@
-
 const getUrlByEmail = (email) => {
-  var url = 'http://localhost:8080/solicitante/';
+  var url = "http://localhost:8080/solicitante/";
   var user = `${email}`;
-  const path =  url + email;
+  const path = url + email;
   console.log(path);
-  return path  ;
-}
+  return user;
+};
 export default getUrlByEmail;
