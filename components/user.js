@@ -3,6 +3,7 @@ import styles from "../styles/Home.module.css";
 const User = ({ name, CURP, url }) => {
 
   return (
+    <>
      <div>
       <div className="customers-list-item">
         <div className="field">
@@ -25,6 +26,7 @@ const User = ({ name, CURP, url }) => {
         </div>
       </main>
     </div>
+    </>
   );
 };
 export default User;

@@ -1,54 +1,209 @@
 import { useState } from "react";
 import { useForm } from "react-hook-form";
+import axios from "axios";
 // also Alert component from bootstrap
 //import { Alert } from 'react-bootstrap';
 
-const PortfolioForm = () => {
+const Countries = [
+  "",
+  "Aguascalientes",
+  "Baja California",
+  "Baja California Sur",
+  "Campeche",
+  "Chiapas",
+  "Chihuahua",
+  "Coahuila de Zaragoza",
+  "Colima",
+  "Ciudad de México",
+  "Durango",
+  "Guanajuato",
+  "Guerrero",
+  "Hidalgo",
+  "Jalisco",
+  "Estado de Mexico",
+  "Michoacan de Ocampo",
+  "Morelos",
+  "Nayarit",
+  "Nuevo Leon",
+  "Oaxaca",
+  "Puebla",
+  "Queretaro de Arteaga",
+  "Quintana Roo",
+  "San Luis Potosi",
+  "Sinaloa",
+  "Sonora",
+  "Tabasco",
+  "Tamaulipas",
+  "Tlaxcala",
+  "Veracruz de Ignacio de la Llave",
+  "Yucatan",
+  "Zacatecas",
+];
+
+const Licenses = [
+  "",
+  "Individual por un dia",
+  "Individual por una semana",
+  "Individual por un año",
+  "Individual para excurciones, por viajes de mas de 3 dias y hasta una año",
+];
+
+const Fishing = [
+  "",
+  "Aguas de jurisdicion federal",
+  "Litoral del Golfo de Mexico",
+  "Litoral del Oceano Pacifico",
+];
+
+const SingIn = () => {
   const [user, setUser] = useState([]);
   // useForm()
   // 1. register -> register input
   // 2. handleSubmit -> extract data from the form
   // 3. errors -> object containing errors
   const { register, handleSubmit, errors } = useForm();
-
+  const axiosConfig = {
+    headers: {
+      "Content-Type": "application/json;charset=UTF-8",
+    },
+  };
   // function to output form data
   // we need to pass it to onSubmit of form element
   const onSubmit = (formData) => {
     const user = JSON.stringify(formData);
     setUser(user);
     console.log(user);
+    axios
+      .post("http://localhost:8080/solicitante/registro", user, axiosConfig)
+      .then((res) => {
+        console.log(res);
+        console.log(res.data);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   };
 
   return (
     // pass onSubmit to handleSubmit of hook form
     // when button will be pressed you should see form data
-    <form onSubmit={handleSubmit(onSubmit)}>
-      <div className="form-group">
-        <label htmlFor="title">Title</label>
-        <input
-          // Register input
-          ref={register}
-          name="name"
-          type="text"
-          className="form-control"
-          id="title"
-        />
-      </div>
-      <div className="form-group">
-        <label htmlFor="description">Description</label>
-        <textarea
-          // Register input
-          ref={register}
-          name="description"
-          rows="5"
-          type="text"
-          className="form-control"
-          id="description"
-        ></textarea>
-      </div>
-      <button type="submit" className="btn btn-primary">
-        Create
-      </button>
-    </form>
+
+    <div className="container">
+      <form onSubmit={handleSubmit(onSubmit)}>
+        <div className="form-group">
+          <label htmlFor="name">Nombre Completo</label>
+          <input
+            ref={register}
+            name="name"
+            type="text"
+            className="form-control"
+            required
+            id="name"
+          />
+        </div>
+        <div className="form-group">
+          <label htmlFor="address">Direccion</label>
+          <input
+            ref={register}
+            name="address"
+            type="text"
+            className="form-control"
+            id="address"
+          />
+        </div>
+        <div className="form-group">
+          <label htmlFor="phone">Numero telefonico</label>
+          <input
+            ref={register}
+            name="phone"
+            type="number"
+            className=" form-control"
+            id="phone"
+          />
+        </div>
+        <div className="form-group">
+          <label htmlFor="RFC">RFC</label>
+          <input
+            ref={register}
+            name="RFC"
+            type="text"
+            className="form-control text-uppercase"
+            id="RFC"
+          />
+        </div>
+        <div className="form-group">
+          <label htmlFor="CURP">CURP</label>
+          <input
+            ref={register}
+            name="CURP"
+            type="text"
+            className="form-control text-uppercase"
+            id="CURP"
+          />
+        </div>
+        <div className="form-group">
+          <label htmlFor="zipCode">Codigo Postal</label>
+          <input
+            ref={register}
+            name="zipCode"
+            type="number"
+            className="form-control"
+            id="zipCode"
+          />
+        </div>
+        <div className="form-group">
+          <label htmlFor="country">Estado</label>
+          <select name="country" className="form-control" ref={register}>
+            {Countries.map((countries) =>
+              countries === "" ? (
+                <option value={countries}> --Seleccione una-- </option>
+              ) : (
+                <option value={countries}> {countries}</option>
+              )
+            )}
+          </select>
+        </div>
+        <div className="form-group">
+          <label htmlFor="email">Email</label>
+          <input
+            ref={register}
+            name="email"
+            type="email"
+            className="form-control"
+            id="email"
+          />
+        </div>
+        <div className="form-group">
+          <label htmlFor="licenseFishing">Licencias</label>
+          <select name="licenseFishing" className="form-control" ref={register}>
+            {Licenses.map((license) =>
+              license === "" ? (
+                <option value={license}> --Seleccione una-- </option>
+              ) : (
+                <option value={license}> {license} </option>
+              )
+            )}
+          </select>
+        </div>
+
+        <div className="form-group">
+          <label htmlFor="fishing">Zona de pesca</label>
+          <select name="fishing" className="form-control" ref={register}>
+            {Fishing.map((fishing) =>
+              fishing === "" ? (
+                <option value={fishing}> --Seleccione una-- </option>
+              ) : (
+                <option value={fishing}> {fishing} </option>
+              )
+            )}
+          </select>
+        </div>
+        <button type="submit" className="btn btn-primary">
+          Create
+        </button>
+      </form>
+    </div>
   );
 };
+
+export default SingIn;
