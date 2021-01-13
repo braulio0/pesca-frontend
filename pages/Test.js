@@ -7,12 +7,12 @@ const Test = ({ router: { query } }) => {
   const object = JSON.parse(query.object);
   const [data, setData] = useState([]);
   const [user, setUser] = useState([]);
-  const api = () => {
-    console.log(user);
+  const apiGet = () => {
     axios.get(`http://localhost:8080/solicitante/${object.email}`).then(
       (response) => {
         console.log(response.data);
-        setData(response.data);
+         setData(response.data);
+          setUser(data.email);
       },
       (error) => {
         console.log(error);
@@ -21,16 +21,18 @@ const Test = ({ router: { query } }) => {
   };
 
   useEffect(() => {
-    api();
+    //const datos = apiGet(object.email);
+    //console.log(datos);
+   apiGet()
+    //setUser(data.email);
+    console.log("hola");
+    console.log(User);
   }, []);
 
   return (
     <>
       <div>
         <User name={data.name} CURP={data.CURP} />
-        <h2> FUNCIONA {object.nombre} </h2>
-        <h3> FUNCIONE {object.apellido}</h3>
-        <h4> hook {user}</h4>
       </div>
     </>
   );

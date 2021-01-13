@@ -1,9 +1,7 @@
 import { useState, Fragment } from "react";
 import { useForm } from "react-hook-form";
-import Link from "next/link";
 import styles from "../styles/Home.module.css";
-import useUser from "../hooks/useUser";
-
+import Link from "next/link";
 const Home = () => {
   //const url = `http://localhost:8080/solicitante/${user}`;
 
@@ -47,7 +45,9 @@ const Home = () => {
       <Link
         href={{ pathname: "/Test", query: { object: JSON.stringify(datos) } }}
       >
-        <a ><button type="button"> Entrar </button></a>
+        <a>
+          <button type="button"> Entrar </button>
+        </a>
       </Link>
     </main>
   );

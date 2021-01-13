@@ -1,59 +1,9 @@
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import axios from "axios";
+import { Countries, Licenses, Fishing } from "../constant/info.js";
 // also Alert component from bootstrap
 //import { Alert } from 'react-bootstrap';
-
-const Countries = [
-  "",
-  "Aguascalientes",
-  "Baja California",
-  "Baja California Sur",
-  "Campeche",
-  "Chiapas",
-  "Chihuahua",
-  "Coahuila de Zaragoza",
-  "Colima",
-  "Ciudad de México",
-  "Durango",
-  "Guanajuato",
-  "Guerrero",
-  "Hidalgo",
-  "Jalisco",
-  "Estado de Mexico",
-  "Michoacan de Ocampo",
-  "Morelos",
-  "Nayarit",
-  "Nuevo Leon",
-  "Oaxaca",
-  "Puebla",
-  "Queretaro de Arteaga",
-  "Quintana Roo",
-  "San Luis Potosi",
-  "Sinaloa",
-  "Sonora",
-  "Tabasco",
-  "Tamaulipas",
-  "Tlaxcala",
-  "Veracruz de Ignacio de la Llave",
-  "Yucatan",
-  "Zacatecas",
-];
-
-const Licenses = [
-  "",
-  "Individual por un dia",
-  "Individual por una semana",
-  "Individual por un año",
-  "Individual para excurciones, por viajes de mas de 3 dias y hasta una año",
-];
-
-const Fishing = [
-  "",
-  "Aguas de jurisdicion federal",
-  "Litoral del Golfo de Mexico",
-  "Litoral del Oceano Pacifico",
-];
 
 const SingIn = () => {
   const [user, setUser] = useState([]);
