@@ -11,8 +11,8 @@ const Test = ({ router: { query } }) => {
     axios.get(`http://localhost:8080/solicitante/${object.email}`).then(
       (response) => {
         console.log(response.data);
-         setData(response.data);
-          setUser(data.email);
+        setData(response.data);
+        setUser(data.email);
       },
       (error) => {
         console.log(error);
@@ -23,7 +23,7 @@ const Test = ({ router: { query } }) => {
   useEffect(() => {
     //const datos = apiGet(object.email);
     //console.log(datos);
-   apiGet()
+    apiGet();
     //setUser(data.email);
     console.log("hola");
     console.log(User);
@@ -32,7 +32,12 @@ const Test = ({ router: { query } }) => {
   return (
     <>
       <div>
-        <User name={data.name} CURP={data.CURP} />
+        <User
+          name={data.name}
+          licenseFishing={data.licenseFishing}
+          fishing = {data.fishing }
+          status={data.status}
+        />
       </div>
     </>
   );
