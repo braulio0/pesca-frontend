@@ -2,6 +2,8 @@ import { useState, Fragment } from "react";
 import { useForm } from "react-hook-form";
 import styles from "../styles/Home.module.css";
 import Link from "next/link";
+import Navbar from "../components/Navbar";
+
 const Home = () => {
   //const url = `http://localhost:8080/solicitante/${user}`;
 
@@ -25,6 +27,10 @@ const Home = () => {
   };
 
   return (
+    <>
+    <div> 
+      <Navbar />
+    </div>
     <main>
       <h1>Busqueda</h1>
       <form className="row" onSubmit={enviarDatos}>
@@ -45,11 +51,10 @@ const Home = () => {
       <Link
         href={{ pathname: "/Test", query: { object: JSON.stringify(datos) } }}
       >
-        <a>
-          <button type="button"> Entrar </button>
-        </a>
+        <a className="btn btn-info" role="button">Entrar</a>
       </Link>
     </main>
+      </>
   );
 };
 export default Home;

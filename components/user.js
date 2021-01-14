@@ -11,7 +11,7 @@ const User = ({ name, licenseFishing, fishing, status }) => {
                         </div>
                     </div>
                 </div>
-                <table class="table">
+                <table className="table">
                     <thead>
                         <tr>
                             <th scope="col">Licensia</th>
@@ -24,11 +24,11 @@ const User = ({ name, licenseFishing, fishing, status }) => {
                             <td>{licenseFishing}</td>
                             <td>{fishing}</td>
                             {status === "PENDING" ? (
-                                <td class="table-warning"> {status}</td>
+                                <td className="table-warning"> {status}</td>
                             ) : (
                                 status === "ACCEPTED" ?  
-                                    <td class="table-success"> {status}</td>: 
-                                <td class="table-danger"> {status}</td>
+                                    <td className="table-success"> {status}</td>: 
+                                <td className="table-danger"> {status}</td>
 
                             )}
                         </tr>

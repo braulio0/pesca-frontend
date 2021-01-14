@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useRouter } from "next/router";
 import { useForm } from "react-hook-form";
 import axios from "axios";
 import { Countries, Licenses, Fishing } from "../constant/info.js";
@@ -7,6 +8,8 @@ import { Countries, Licenses, Fishing } from "../constant/info.js";
 
 const SingIn = () => {
   const [user, setUser] = useState([]);
+  const router = useRouter();
+
   // useForm()
   // 1. register -> register input
   // 2. handleSubmit -> extract data from the form
@@ -27,10 +30,16 @@ const SingIn = () => {
       .post("http://localhost:8080/solicitante/registro", user, axiosConfig)
       .then((res) => {
         console.log(res);
-        console.log(res.data);
+        console.log(res.status);
+        console.log("lo de arriba es la respueta ok");
+        res.status === 200 &&
+          router.push({
+            pathname: "/Test",
+            query: { object: user },
+          });
       })
-      .catch((error) => {
-        console.log(error);
+      .catch((err) => {
+        console.log(err);
       });
   };
 
