@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import { useForm } from "react-hook-form";
 import axios from "axios";
@@ -8,8 +8,8 @@ import { Countries, Licenses, Fishing } from "../constant/info.js";
 
 const SingIn = () => {
   const [user, setUser] = useState([]);
+  const [data, setData] = useState([]);
   const router = useRouter();
-
   // useForm()
   // 1. register -> register input
   // 2. handleSubmit -> extract data from the form
@@ -31,7 +31,6 @@ const SingIn = () => {
       .then((res) => {
         console.log(res);
         console.log(res.status);
-        console.log("lo de arriba es la respueta ok");
         res.status === 200 &&
           router.push({
             pathname: "/Test",
@@ -42,6 +41,23 @@ const SingIn = () => {
         console.log(err);
       });
   };
+  // function to get all clubs on db
+  //
+  const apiGet = () => {
+    var response;
+    axios.get(`http://localhost:8080/clubs/`).then(
+      (response) => {
+        console.log(response.data);
+        setData(response.data);
+      },
+      (error) => {
+        console.log(error);
+      }
+    );
+  };
+  useEffect(() => {
+    apiGet();
+  }, []);
 
   return (
     // pass onSubmit to handleSubmit of hook form
@@ -53,11 +69,11 @@ const SingIn = () => {
           <label htmlFor="name">Nombre Completo</label>
           <input
             ref={register}
-            name="name"
+            name="Username"
             type="text"
             className="form-control"
             required
-            id="name"
+            id="Username"
           />
         </div>
         <div className="form-group">
@@ -155,6 +171,14 @@ const SingIn = () => {
                 <option value={fishing}> {fishing} </option>
               )
             )}
+          </select>
+        </div>
+        <div className="form-group">
+          <label htmlFor="clubName"> Nombre de Club</label>
+          <select name="clubName" className="form-control" ref={register}>
+            {data.map(({ name }) => (
+              <option value={name}>{name}</option>
+            ))}
           </select>
         </div>
         <button type="submit" className="btn btn-primary">
