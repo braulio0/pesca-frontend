@@ -21,10 +21,7 @@ const Test = ({ router: { query } }) => {
   };
 
   useEffect(() => {
-    //const datos = apiGet(object.email);
-    //console.log(datos);
     apiGet();
-    //setUser(data.email);
     console.log("hola");
     console.log(User);
   }, []);
@@ -33,10 +30,11 @@ const Test = ({ router: { query } }) => {
     <>
       <div>
         <User
-          name={data.name}
+          Username={data.Username}
           licenseFishing={data.licenseFishing}
-          fishing = {data.fishing }
+          fishing={data.fishing}
           status={data.status}
+          clubName={data.clubName}
         />
       </div>
     </>
