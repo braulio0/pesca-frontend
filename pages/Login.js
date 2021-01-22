@@ -36,6 +36,7 @@ const Login = () => {
           <form className="row" onSubmit={enviarDatos}>
             <div className="col-md-12">
               <input
+                required
                 type="text"
                 placeholder="Email"
                 className="form-control"

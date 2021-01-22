@@ -16,7 +16,7 @@ const Home = () => {
     <>
 
       <Navba/>
-
+      
       <CarouselMain></CarouselMain>
 
       <CardInfo></CardInfo>

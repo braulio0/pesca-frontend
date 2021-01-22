@@ -9,7 +9,7 @@ const FormMessage = () => {
         console.log(user);
     };
     return (
-        <div className="container py-5">
+        <div id="contact" className="container py-5">
             <h3 className="display-4 pb-4">Contacto</h3>
             <Form onSubmit={handleSubmit(onSubmit)}>
                 <Form.Group controlId="formBasicEmail">
