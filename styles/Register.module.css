@@ -1,0 +1,18 @@
+.bg{
+    position: relative;
+    background-image: url(../public/bg-register.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+}
+.bg::after{
+    content: " ";
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    background-color: black;
+    opacity: 0.25;
+    z-index: 1;
+}

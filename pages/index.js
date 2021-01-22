@@ -8,6 +8,7 @@ import FormMessage from "../components/ContactForm";
 import CardInfo from "../components/InfoClubs";
 import JumbotronAbout from "../components/About";
 import FooterPages from "../components/Footer";
+import hola from "../constant/scrollToID";
 
 const Home = () => {
   //const url = `http://localhost:8080/solicitante/${user}`;
@@ -16,7 +17,7 @@ const Home = () => {
     <>
 
       <Navba/>
-
+      
       <CarouselMain></CarouselMain>
 
       <CardInfo></CardInfo>

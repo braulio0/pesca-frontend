@@ -3,8 +3,7 @@ import { useRouter } from "next/router";
 import { useForm } from "react-hook-form";
 import axios from "axios";
 import { Countries, Licenses, Fishing } from "../constant/info.js";
-// also Alert component from bootstrap
-//import { Alert } from 'react-bootstrap';
+import styles from '../styles/Register.module.css';
 
 const SingIn = () => {
   const [user, setUser] = useState([]);
@@ -60,132 +59,148 @@ const SingIn = () => {
   }, []);
 
   return (
-    // pass onSubmit to handleSubmit of hook form
-    // when button will be pressed you should see form data
+    <section className={styles.bg}>
+      <div className="container d-flex align-items-center text-white" style={{ height: "100vh", position: "relative", zIndex: "3" }}>
+        <div className="row justify-content-center p-4 border border-dark shadow-lg bg-transparent rounded rounded-lg">
+          <h1 className="display-4 font-weight-bold text-white pb-3">Registro de Integrantes</h1>
+          <form onSubmit={handleSubmit(onSubmit)}>
+            <div className="form-group">
+              <label htmlFor="name">Nombre Completo</label>
+              <input
+                ref={register}
+                name="Username"
+                type="text"
+                className="form-control"
+                required
+                id="Username" />
+            </div>
 
-    <div className="container">
-      <form onSubmit={handleSubmit(onSubmit)}>
-        <div className="form-group">
-          <label htmlFor="name">Nombre Completo</label>
-          <input
-            ref={register}
-            name="Username"
-            type="text"
-            className="form-control"
-            required
-            id="Username"
-          />
-        </div>
-        <div className="form-group">
-          <label htmlFor="address">Direccion</label>
-          <input
-            ref={register}
-            name="address"
-            type="text"
-            className="form-control"
-            id="address"
-          />
-        </div>
-        <div className="form-group">
-          <label htmlFor="phone">Numero telefonico</label>
-          <input
-            ref={register}
-            name="phone"
-            type="number"
-            className=" form-control"
-            id="phone"
-          />
-        </div>
-        <div className="form-group">
-          <label htmlFor="RFC">RFC</label>
-          <input
-            ref={register}
-            name="RFC"
-            type="text"
-            className="form-control text-uppercase"
-            id="RFC"
-          />
-        </div>
-        <div className="form-group">
-          <label htmlFor="CURP">CURP</label>
-          <input
-            ref={register}
-            name="CURP"
-            type="text"
-            className="form-control text-uppercase"
-            id="CURP"
-          />
-        </div>
-        <div className="form-group">
-          <label htmlFor="zipCode">Codigo Postal</label>
-          <input
-            ref={register}
-            name="zipCode"
-            type="number"
-            className="form-control"
-            id="zipCode"
-          />
-        </div>
-        <div className="form-group">
-          <label htmlFor="country">Estado</label>
-          <select name="country" className="form-control" ref={register}>
-            {Countries.map((countries) =>
-              countries === "" ? (
-                <option value={countries}> --Seleccione una-- </option>
-              ) : (
-                <option value={countries}> {countries}</option>
-              )
-            )}
-          </select>
-        </div>
-        <div className="form-group">
-          <label htmlFor="email">Email</label>
-          <input
-            ref={register}
-            name="email"
-            type="email"
-            className="form-control"
-            id="email"
-          />
-        </div>
-        <div className="form-group">
-          <label htmlFor="licenseFishing">Licencias</label>
-          <select name="licenseFishing" className="form-control" ref={register}>
-            {Licenses.map((license) =>
-              license === "" ? (
-                <option value={license}> --Seleccione una-- </option>
-              ) : (
-                <option value={license}> {license} </option>
-              )
-            )}
-          </select>
-        </div>
+            <div className="form-row">
+              <div className="form-group col-7">
+                <label htmlFor="address">Direccion</label>
+                <input
+                  ref={register}
+                  name="address"
+                  type="text"
+                  className="form-control"
+                  id="address"
+                />
+              </div>
+              <div className="form-group col-5">
+                <label htmlFor="phone">Numero telefonico</label>
+                <input
+                  ref={register}
+                  name="phone"
+                  type="number"
+                  className=" form-control"
+                  id="phone"
+                />
+              </div>
+            </div>
 
-        <div className="form-group">
-          <label htmlFor="fishing">Zona de pesca</label>
-          <select name="fishing" className="form-control" ref={register}>
-            {Fishing.map((fishing) =>
-              fishing === "" ? (
-                <option value={fishing}> --Seleccione una-- </option>
-              ) : (
-                <option value={fishing}> {fishing} </option>
-              )
-            )}
-          </select>
+            <div className="form-row">
+              <div className="form-group col-6">
+                <label htmlFor="RFC">RFC</label>
+                <input
+                  ref={register}
+                  name="RFC"
+                  type="text"
+                  className="form-control text-uppercase"
+                  id="RFC"
+                />
+              </div>
+              <div className="form-group col-6">
+                <label htmlFor="CURP">CURP</label>
+                <input
+                  ref={register}
+                  name="CURP"
+                  type="text"
+                  className="form-control text-uppercase"
+                  id="CURP"
+                />
+              </div>
+            </div>
+
+            <div className="form-row">
+              <div className="form-group col-4">
+                <label htmlFor="zipCode">Codigo Postal</label>
+                <input
+                  ref={register}
+                  name="zipCode"
+                  type="number"
+                  className="form-control"
+                  id="zipCode"
+                />
+              </div>
+              <div className="form-group col-8">
+                <label htmlFor="country">Estado</label>
+                <select name="country" className="form-control" ref={register}>
+                  {Countries.map((countries) =>
+                    countries === "" ? (
+                      <option value={countries}> --Seleccione una-- </option>
+                    ) : (
+                        <option value={countries}> {countries}</option>
+                      )
+                  )}
+                </select>
+              </div>
+            </div>
+
+            <div className="form-row">
+              <div className="form-group col-6">
+                <label htmlFor="email">Email</label>
+                <input
+                  ref={register}
+                  name="email"
+                  type="email"
+                  className="form-control"
+                  id="email"
+                />
+              </div>
+              <div className="form-group col-6">
+                <label htmlFor="licenseFishing">Licencias</label>
+                <select name="licenseFishing" className="form-control" ref={register}>
+                  {Licenses.map((license) =>
+                    license === "" ? (
+                      <option value={license}> --Seleccione una-- </option>
+                    ) : (
+                        <option value={license}> {license} </option>
+                      )
+                  )}
+                </select>
+              </div>
+            </div>
+
+            <div className="form-row">
+              <div className="form-group col-6">
+                <label htmlFor="fishing">Zona de pesca</label>
+                <select name="fishing" className="form-control" ref={register}>
+                  {Fishing.map((fishing) =>
+                    fishing === "" ? (
+                      <option value={fishing}> --Seleccione una-- </option>
+                    ) : (
+                        <option value={fishing}> {fishing} </option>
+                      )
+                  )}
+                </select>
+              </div>
+              <div className="form-group col-6">
+                <label htmlFor="clubName"> Nombre de Club</label>
+                <select name="clubName" className="form-control" ref={register}>
+                  {data.map(({ name }) => (
+                    <option value={name}>{name}</option>
+                  ))}
+                </select>
+              </div>
+            </div>
+
+            <button type="submit" className="mt-3 btn btn-primary btn-lg w-100">
+              Registrar
+          </button>
+          </form>
         </div>
-        <div className="form-group">
-          <label htmlFor="clubName"> Nombre de Club</label>
-          <select name="clubName" className="form-control" ref={register}>
-            {data.map(({ name }) => (
-              <option value={name}>{name}</option>
-            ))}
-          </select>
-        </div>
-        <button type="submit" className="btn btn-primary">
-          Create
-        </button>
-      </form>
-    </div>
+      </div>
+    </section>
   );
 };
 
