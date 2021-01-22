@@ -1,14 +1,12 @@
 import { Carousel } from "react-bootstrap";
-import "bootstrap/dist/css/bootstrap.min.css";
 import styles from "../styles/Carousel.module.css";
 const slide1 = "slide1.jpg";
 const slide2 = "slide2.jpg";
 const slide3 = "slide3.jpg";
 
-class CarouselMain extends React.Component {
-    render() {
-        return (
-            <div className="container-fluid">
+const CarouselMain = () => {
+           return (
+            <div id="home" className='container-fluid'>
                 <div className="row">
                     <div className="col-12 p-0">
                         <Carousel className={styles.shadow}>
@@ -72,6 +70,5 @@ class CarouselMain extends React.Component {
             </div>
         );
     }
-}
 
 export default CarouselMain;

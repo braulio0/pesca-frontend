@@ -7,52 +7,45 @@ const logo = "logo_small.png";
 
 const Navba = () => {
   return (
-    <Navbar className="fixed-top shadow-lg" collapseOnSelect expand="lg" bg="light" variant="light">
-      <Navbar.Brand className="ml-lg-5" href="#home">
-        <a href="#">
-          <img
-            // className="w-50"
-            style={{width : "250px"}}
-            src={logo}
-            alt="Third slide"
-          />
+    <Navbar
+      className="fixed-top shadow-lg"
+      collapseOnSelect
+      expand="lg"
+      bg="light"
+      variant="light"
+    >
+      <Navbar.Brand className="ml-lg-5">
+        <a class="nav-link" href="#home">
+          <img style={{ width: "250px" }} src={logo} />
         </a>
       </Navbar.Brand>
       <Navbar.Toggle aria-controls="responsive-navbar-nav" />
       <Navbar.Collapse id="responsive-navbar-nav">
         <Nav className="justify-content-between w-100 mr-5">
-          <ul className="navbar-nav mr-auto mt-2 mt-lg-0 align-items-lg-center">
-            <li className="nav-item active">
-              <a className="nav-link" href="#">
-                Inicio <span className="sr-only">(current)</span>
+          <ul class="navbar-nav mr-auto mt-2 mt-lg-0 align-items-lg-center">
+            <li class="nav-item active">
+              <a class="nav-link" href="#home">
+                Inicio <span class="sr-only">(current)</span>
               </a>
             </li>
-            <li className="nav-item">
-              <Link href="/">
-                <a className="nav-link " href="#">
-                  Clubs
-                </a>
-              </Link>
+            <li class="nav-item">
+              <a class="nav-link " href="#clubs">
+                Clubs
+              </a>
             </li>
-            <li className="nav-item">
-              <Link href="/">
-                <a className="nav-link " href="#">
-                  Sobre Nosotros
-                </a>
-              </Link>
+            <li class="nav-item">
+              <a class="nav-link " href="#about">
+                Sobre Nosotros
+              </a>
             </li>
-            <li className="nav-item">
-              <Link href="/">
-                <a className="nav-link " href="#">
-                  Contacto
-                </a>
-              </Link>
+            <li class="nav-item">
+              <a class="nav-link " href="#contact">
+                Contacto
+              </a>
             </li>
           </ul>
           <Link href="/Login">
-            <a className="btn btn-primary align-self-lg-center">
-              Solicitantes
-            </a>
+            <a className="btn btn-primary align-self-lg-center">Solicitantes</a>
           </Link>
         </Nav>
       </Navbar.Collapse>

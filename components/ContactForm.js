@@ -8,7 +8,6 @@ const FormMessage = () => {
         const user = JSON.stringify(formData);
         console.log(user);
     };
-
     return (
         <div className="container py-5">
             <h3 className="display-4 pb-4">Contacto</h3>

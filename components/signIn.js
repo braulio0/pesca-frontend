@@ -3,8 +3,6 @@ import { useRouter } from "next/router";
 import { useForm } from "react-hook-form";
 import axios from "axios";
 import { Countries, Licenses, Fishing } from "../constant/info.js";
-// also Alert component from bootstrap
-//import { Alert } from 'react-bootstrap';
 
 const SingIn = () => {
   const [user, setUser] = useState([]);
@@ -60,9 +58,6 @@ const SingIn = () => {
   }, []);
 
   return (
-    // pass onSubmit to handleSubmit of hook form
-    // when button will be pressed you should see form data
-
     <div className="container">
       <form onSubmit={handleSubmit(onSubmit)}>
         <div className="form-group">

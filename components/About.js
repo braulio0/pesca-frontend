@@ -1,13 +1,9 @@
-import React from "react";
-import { Jumbotron } from "react-bootstrap";
-import { Container } from "react-bootstrap";
-import "bootstrap/dist/css/bootstrap.min.css";
+import { Jumbotron, Container } from "react-bootstrap";
 const logo2 = "logo_small_icon_only_inverted.png";
 
-class JumbotronAbout extends React.Component {
-    render() {
-        return (
-            <Jumbotron fluid className="py-5 my-5">
+const JumbotronAbout = () => {
+           return (
+            <Jumbotron id="about" fluid className="py-5 my-5">
                 <Container className="py-5">
                     <div className="row">
                         <div className="col-12 col-md-6 pb-5 pb-md-0">
@@ -42,6 +38,6 @@ class JumbotronAbout extends React.Component {
             </Jumbotron>
         );
     }
-}
+
 
 export default JumbotronAbout;
