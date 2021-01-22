@@ -21,7 +21,7 @@ const Navba = () => {
       <Navbar.Collapse id="responsive-navbar-nav">
         <Nav className="justify-content-between w-100 mr-5">
           <ul class="navbar-nav mr-auto mt-2 mt-lg-0 align-items-lg-center">
-            <li class="nav-item active">
+            <li class="nav-item">
               <a class="nav-link" href="#home" >
                 Inicio <span class="sr-only">(current)</span>
               </a>
