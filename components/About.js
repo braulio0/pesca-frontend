@@ -8,7 +8,7 @@ class JumbotronAbout extends React.Component {
     render() {
         return (
 
-            <Jumbotron fluid className="py-5 my-5">
+            <Jumbotron id="about" fluid className="py-5 my-5">
                 <Container className="py-5">
                     <div class="row">
                         <div class="col-12 col-md-6 pb-5 pb-md-0">

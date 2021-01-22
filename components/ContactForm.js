@@ -6,7 +6,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 class FormMessage extends React.Component {
     render() {
         return (
-            <div className="container py-5">
+            <div id="contact" className="container py-5">
                 <h3 className="display-4 pb-4">Contacto</h3>
                 <Form>
                     <Form.Group controlId="formBasicEmail">

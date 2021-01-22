@@ -10,7 +10,7 @@ class CarouselMain extends React.Component {
 
     render() {
         return (
-            <div className='container-fluid'>
+            <div id="home" className='container-fluid'>
                 <div className="row">
                     <div className="col-12 p-0">
                         <Carousel className={styles.shadow}>

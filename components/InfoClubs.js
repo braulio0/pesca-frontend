@@ -10,7 +10,7 @@ const imgClub3 = 'club-pesca3.jpg';
 class CardInfo extends React.Component {
     render() {
         return (
-            <div className="container py-5 my-5">
+            <div id="clubs" className="container py-5 my-5">
                 <h3 className="display-4 pb-4">Clubes Asociados</h3>
                 <CardDeck>
                     <Card>
@@ -18,8 +18,8 @@ class CardInfo extends React.Component {
                         <Card.Body>
                             <Card.Title>Club "Cielo Negro" de Mazatlán</Card.Title>
                             <Card.Text>
-                                This is a wider card with supporting text below as a natural lead-in to
-                                additional content. This content is a little bit longer.
+                                Club "Cielo Negro" se encuentra entre los mas visitados de todo Mazatlán, 
+                                con una comunidad maravillosa que comparte su pasión por la pesca.
                              </Card.Text>
                         </Card.Body>
                         <Card.Footer className="d-flex justify-content-between">
@@ -33,8 +33,8 @@ class CardInfo extends React.Component {
                         <Card.Body>
                             <Card.Title>Club "Atlantes" de Cancún</Card.Title>
                             <Card.Text>
-                                This card has supporting text below as a natural lead-in to additional
-                                content.{' '}
+                                Los "Atlantes" son un grupo especial, los visitantes o aquellas personas 
+                                nuevas en la pesca son bien recibidas año con año por los profesionales.
                             </Card.Text>
                         </Card.Body>
                         <Card.Footer className="d-flex justify-content-between">
@@ -48,9 +48,8 @@ class CardInfo extends React.Component {
                         <Card.Body>
                             <Card.Title>Club "Esperanza" de Los Cabos</Card.Title>
                             <Card.Text>
-                                This is a wider card with supporting text below as a natural lead-in to
-                                additional content. This card has even longer content than the first to
-                                show that equal height action.
+                                En el club "Esperanza" no solo hice grandes amigos, hice una familia, es
+                                de los mejores lugares para conocer amantes de la pesca y practicar a un buen nivel.
                             </Card.Text>
                         </Card.Body>
                         <Card.Footer className="d-flex justify-content-between">
