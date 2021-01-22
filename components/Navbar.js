@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import Link from "next/link";
 import Button from "react-bootstrap/Button";
 import Navbar from "react-bootstrap/Navbar";
@@ -7,6 +8,9 @@ import hola from "../constant/scrollToID"
 const logo = "logo_small.png";
 
 const Navba = () => {
+  useEffect(() =>{
+    hola(); // Effec to scroll to href
+  }, []); 
 
   return (
     <Navbar

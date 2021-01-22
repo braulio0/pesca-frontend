@@ -1,4 +1,4 @@
-const hola = () => {
+ const hola = () => {
   const links = document.querySelectorAll(".nav-link");
 
   for (const link of links) {
@@ -16,5 +16,4 @@ const hola = () => {
     });
   }
 };
-
 export default hola;
