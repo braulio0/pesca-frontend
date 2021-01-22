@@ -1,8 +1,6 @@
 import Link from "next/link";
-import Button from "react-bootstrap/Button";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
-import NavDropdown from "react-bootstrap/NavDropdown";
 const logo = "logo_small.png";
 
 const Navba = () => {
