@@ -7,7 +7,7 @@ const User = ({ Username, licenseFishing, fishing, status, clubName }) => {
                 <div className="container">
                     <div className="row">
                         <div className="col-md-12">
-                            <h3>Hola {Username}</h3>
+                            <h3 className={styles.header}>Hola {Username}</h3>
                         </div>
                     </div>
                 </div>

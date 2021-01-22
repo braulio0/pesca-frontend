@@ -21,36 +21,36 @@ const Navba = () => {
       <Navbar.Toggle aria-controls="responsive-navbar-nav" />
       <Navbar.Collapse id="responsive-navbar-nav">
         <Nav className="justify-content-between w-100 mr-5">
-          <ul class="navbar-nav mr-auto mt-2 mt-lg-0 align-items-lg-center">
-            <li class="nav-item active">
-              <a class="nav-link" href="#">
-                Inicio <span class="sr-only">(current)</span>
+          <ul className="navbar-nav mr-auto mt-2 mt-lg-0 align-items-lg-center">
+            <li className="nav-item active">
+              <a className="nav-link" href="#">
+                Inicio <span className="sr-only">(current)</span>
               </a>
             </li>
-            <li class="nav-item">
+            <li className="nav-item">
               <Link href="/">
-                <a class="nav-link " href="#">
+                <a className="nav-link " href="#">
                   Clubs
                 </a>
               </Link>
             </li>
-            <li class="nav-item">
+            <li className="nav-item">
               <Link href="/">
-                <a class="nav-link " href="#">
+                <a className="nav-link " href="#">
                   Sobre Nosotros
                 </a>
               </Link>
             </li>
-            <li class="nav-item">
+            <li className="nav-item">
               <Link href="/">
-                <a class="nav-link " href="#">
+                <a className="nav-link " href="#">
                   Contacto
                 </a>
               </Link>
             </li>
           </ul>
           <Link href="/Login">
-            <a class="btn btn-primary align-self-lg-center">
+            <a className="btn btn-primary align-self-lg-center">
               Solicitantes
             </a>
           </Link>
