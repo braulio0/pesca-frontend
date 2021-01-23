@@ -4,7 +4,7 @@ import Button from "react-bootstrap/Button";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import NavDropdown from "react-bootstrap/NavDropdown";
-import hola from "../constant/scrollToID"
+import hola from "../constant/scrollToID";
 const logo = "logo_small.png";
 
 const Navba = () => {
