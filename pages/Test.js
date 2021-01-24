@@ -22,6 +22,7 @@ const Test = ({ router: { query } }) => {
 
   useEffect(() => {
     apiGet();
+    console.log(object);
     console.log("hola");
     console.log(User);
   }, []);

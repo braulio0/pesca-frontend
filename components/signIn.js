@@ -144,6 +144,16 @@ const SingIn = () => {
           />
         </div>
         <div className="form-group">
+          <label htmlFor="password">Email</label>
+          <input
+            ref={register}
+            name="password"
+            type="password"
+            className="form-control"
+            id="password"
+          />
+        </div>
+        <div className="form-group">
           <label htmlFor="licenseFishing">Licencias</label>
           <select name="licenseFishing" className="form-control" ref={register}>
             {Licenses.map((license) =>
