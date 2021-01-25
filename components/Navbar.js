@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import Link from "next/link";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
@@ -6,6 +7,11 @@ import hola from "../constant/scrollToID";
 const logo = "logo_small.png";
 
 const Navba = () => {
+
+  useEffect(() =>{
+    hola(); // Effec to scroll to href
+  }, []); 
+
 
   return (
     <Navbar
@@ -16,7 +22,9 @@ const Navba = () => {
       variant="light"
     >
       <Navbar.Brand className="ml-lg-5">
+
         <a class="nav-link" href="#home" onClick={hola} style={{ outline: "0" }}> 
+
           <img style={{ width: "250px" }} src={logo} />
         </a>
       </Navbar.Brand>
@@ -25,22 +33,31 @@ const Navba = () => {
         <Nav className="justify-content-between w-100 mr-5">
           <ul class="navbar-nav mr-auto mt-2 mt-lg-0 align-items-lg-center">
             <li class="nav-item">
+
               <a class="nav-link" href="#home" onClick={hola} style={{ outline: "0" }}>
+
                 Inicio <span class="sr-only">(current)</span>
               </a>
             </li>
             <li class="nav-item">
+
               <a class="nav-link " href="#clubs" onClick={hola} style={{ outline: "0" }}>
+
                 Clubs
               </a>
             </li>
             <li class="nav-item">
+
               <a class="nav-link " href="#about" onClick={hola} style={{ outline: "0" }}>
+
+
                 Sobre Nosotros
               </a>
             </li>
             <li class="nav-item">
+
               <a class="nav-link " href="#contact" onClick={hola} style={{ outline: "0" }}>
+
                 Contacto
               </a>
             </li>

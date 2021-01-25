@@ -3,6 +3,7 @@ import styles from "../styles/User.module.css";
 const User = ({ Username, licenseFishing, fishing, status, clubName }) => {
     return (
         <>
+
             <section className={styles.bg}>
                 <div >
                     <div className="container container d-flex align-items-center" style={{ height: "100vh", position: "relative", zIndex: "3" }}>
@@ -36,6 +37,8 @@ const User = ({ Username, licenseFishing, fishing, status, clubName }) => {
                                     </tbody>
                                 </table>
                             </div>
+
+  
                         </div>
                     </div>
                 </div>

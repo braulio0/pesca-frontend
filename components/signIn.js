@@ -3,7 +3,9 @@ import { useRouter } from "next/router";
 import { useForm } from "react-hook-form";
 import axios from "axios";
 import { Countries, Licenses, Fishing } from "../constant/info.js";
+
 import styles from '../styles/Register.module.css';
+
 
 const SingIn = () => {
   const [user, setUser] = useState([]);
@@ -59,6 +61,7 @@ const SingIn = () => {
   }, []);
 
   return (
+
     <section className={styles.bg}>
       <div className="container d-flex align-items-center text-white" style={{ height: "100vh", position: "relative", zIndex: "3" }}>
         <div className="row justify-content-center p-4 border border-dark shadow-lg bg-transparent rounded rounded-lg">
@@ -97,7 +100,6 @@ const SingIn = () => {
                 />
               </div>
             </div>
-
             <div className="form-row">
               <div className="form-group col-6">
                 <label htmlFor="RFC">RFC</label>
