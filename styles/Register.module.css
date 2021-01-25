@@ -1,6 +1,6 @@
 .bg{
     position: relative;
-    background-image: url(../public/bg-login.jpg);
+    background-image: url(../public/bg-register.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 50% 50%;
@@ -13,11 +13,6 @@
     right: 0;
     position: absolute;
     background-color: black;
-    opacity: 0.55;
+    opacity: 0.25;
     z-index: 1;
 }
-.mainz{
-    z-index: 2;
-}
-
-
