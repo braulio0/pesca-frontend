@@ -71,12 +71,12 @@ const Administrador = () => {
               </li>
               <li class="nav-item">
                 <a class="nav-link " href="#clubs" onClick={Pendiente}>
-                  Pendientes{" "}
+                  Pendientes
                 </a>
               </li>
               <li class="nav-item">
                 <a class="nav-link " href="#about" onClick={Aceptados}>
-                  Aceptados{" "}
+                  Aceptados
                 </a>
               </li>
               <li class="nav-item">
@@ -89,7 +89,7 @@ const Administrador = () => {
         </Navbar.Collapse>
       </Navbar>
 
-      <div className="container m-5 p-2">
+      <div className="container m-5 p-5">
         <ListUser data={user} />
       </div>
     </>
