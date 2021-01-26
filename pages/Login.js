@@ -114,7 +114,7 @@ const Login = () => {
                   // required
                   type="text"
                   placeholder="Email"
-                  className="form-control m-2"
+                  className="form-control my-2"
                   onChange={handleInputChange}
                   name="email"
                 ></input>
@@ -122,23 +122,20 @@ const Login = () => {
                   // required
                   type="password"
                   placeholder="password"
-                  className="form-control m-2"
+                  className="form-control my-2"
                   onChange={handleInputChange}
                   name="password"
                 ></input>
               </div>
-              <button
-                type="submit"
-                className="btn btn-outline-info my-3 d-flex justify-content-center col-12"
-              >
-                Enviar
-              </button>
+
 
               <div className="col-12 pb-5">
-                {/* <a className="btn btn-outline-info my-3 d-flex justify-content-center w-100" href={{ pathname: "/Test", query: { object: JSON.stringify(datos) }, }}>
-                Buscar
-              </a> */}
-
+                <button
+                  type="submit"
+                  className="btn btn-outline-info my-3 d-flex justify-content-center col-12"
+                >
+                  Enviar
+                </button>
                 <a
                   className="btn btn-outline-success my-3 d-flex justify-content-center"
                   type="button"
