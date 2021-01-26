@@ -34,7 +34,7 @@ const SingIn = () => {
         res.status === 200 &&
           router.push({
             pathname: "/Test",
-            query: { object: user },
+            query: { object: JSON.stringify(res.data.email)},
           });
       })
       .catch((err) => {
