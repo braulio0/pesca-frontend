@@ -4,8 +4,7 @@ import { useForm } from "react-hook-form";
 import axios from "axios";
 import { Countries, Licenses, Fishing } from "../constant/info.js";
 
-import styles from '../styles/Register.module.css';
-
+import styles from "../styles/Register.module.css";
 
 const SingIn = () => {
   const [user, setUser] = useState([]);
@@ -61,11 +60,15 @@ const SingIn = () => {
   }, []);
 
   return (
-
     <section className={styles.bg}>
-      <div className="container d-flex align-items-center text-white" style={{ height: "100vh", position: "relative", zIndex: "3" }}>
+      <div
+        className="container d-flex align-items-center text-white"
+        style={{ height: "100vh", position: "relative", zIndex: "3" }}
+      >
         <div className="row justify-content-center p-4 border border-dark shadow-lg bg-transparent rounded rounded-lg">
-          <h1 className="display-4 font-weight-bold text-white pb-3">Registro de Integrantes</h1>
+          <h1 className="display-4 font-weight-bold text-white pb-3">
+            Registro de Integrantes
+          </h1>
           <form onSubmit={handleSubmit(onSubmit)}>
             <div className="form-group">
               <label htmlFor="name">Nombre Completo</label>
@@ -75,7 +78,8 @@ const SingIn = () => {
                 type="text"
                 className="form-control"
                 required
-                id="Username" />
+                id="Username"
+              />
             </div>
 
             <div className="form-row">
@@ -141,8 +145,8 @@ const SingIn = () => {
                     countries === "" ? (
                       <option value={countries}> --Seleccione una-- </option>
                     ) : (
-                        <option value={countries}> {countries}</option>
-                      )
+                      <option value={countries}> {countries}</option>
+                    )
                   )}
                 </select>
               </div>
@@ -161,13 +165,17 @@ const SingIn = () => {
               </div>
               <div className="form-group col-6">
                 <label htmlFor="licenseFishing">Licencias</label>
-                <select name="licenseFishing" className="form-control" ref={register}>
+                <select
+                  name="licenseFishing"
+                  className="form-control"
+                  ref={register}
+                >
                   {Licenses.map((license) =>
                     license === "" ? (
                       <option value={license}> --Seleccione una-- </option>
                     ) : (
-                        <option value={license}> {license} </option>
-                      )
+                      <option value={license}> {license} </option>
+                    )
                   )}
                 </select>
               </div>
@@ -181,8 +189,8 @@ const SingIn = () => {
                     fishing === "" ? (
                       <option value={fishing}> --Seleccione una-- </option>
                     ) : (
-                        <option value={fishing}> {fishing} </option>
-                      )
+                      <option value={fishing}> {fishing} </option>
+                    )
                   )}
                 </select>
               </div>
@@ -195,10 +203,21 @@ const SingIn = () => {
                 </select>
               </div>
             </div>
+            <div className="form-group">
+              <label htmlFor="password">Password </label>
+              <input
+                ref={register}
+                name="password"
+                type="password"
+                className="form-control"
+                required
+                id="password"
+              />
+            </div>
 
             <button type="submit" className="mt-3 btn btn-primary btn-lg w-100">
               Registrar
-          </button>
+            </button>
           </form>
         </div>
       </div>
