@@ -65,7 +65,7 @@ const SingIn = () => {
         className="container d-flex align-items-center text-white"
         style={{ height: "100vh", position: "relative", zIndex: "3" }}
       >
-        <div className="row justify-content-center p-4 border border-dark shadow-lg bg-transparent rounded rounded-lg">
+        <div className="row justify-content-center pl-4 pr-4 border border-dark shadow-lg bg-transparent rounded rounded-lg">
           <h1 className="display-4 font-weight-bold text-white pb-3">
             Registro de Integrantes
           </h1>
@@ -215,7 +215,7 @@ const SingIn = () => {
               />
             </div>
 
-            <button type="submit" className="mt-3 btn btn-primary btn-lg w-100">
+            <button type="submit" className="mt-1 btn btn-primary btn-lg w-100">
               Registrar
             </button>
           </form>

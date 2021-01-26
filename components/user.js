@@ -9,7 +9,10 @@ const User = ({ Username, licenseFishing, fishing, status, clubName }) => {
                     <div className="container container d-flex align-items-center" style={{ height: "100vh", position: "relative", zIndex: "3" }}>
                         <div className="row w-100 p-5 border border-dark shadow-lg bg-transparent rounded rounded-lg">
                             <div className="col-md-12">
-                                <h3 className="h1 font-weight-bold text-white">🎣 Hola {Username} !</h3>
+                                <div className="row m-0 justify-content-between">
+                                    <h3 className="h1 font-weight-bold text-white">🎣 Hola {Username} !</h3>
+                                    <a className="btn btn-danger px-4 align-self-center" type="button" href="\">Salir</a>
+                                </div>
                             </div>
                             <div className="col-md-12">
                                 <table className="table table-hover table-light mt-3 shadow">

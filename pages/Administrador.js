@@ -64,9 +64,8 @@ const Administrador = () => {
           <Nav className="justify-content-between w-100 mr-5">
             <ul class="navbar-nav mr-auto mt-2 mt-lg-0 align-items-lg-center">
               <li class="nav-item">
-                <a class="nav-link" href="#home">
+                <a class="nav-link" href="\">
                   Inicio
-                  <span class="sr-only">(current)</span>
                 </a>
               </li>
               <li class="nav-item">
@@ -89,9 +88,16 @@ const Administrador = () => {
         </Navbar.Collapse>
       </Navbar>
 
-      <div className="container m-5 p-5">
-        <ListUser data={user} />
-      </div>
+      <section className="d-flex justify-content-center mt-5 py-5">
+        <div className="container m-5">
+          <div className="row">
+            <div className="table-responsive">
+              <ListUser data={user} />
+            </div>
+          </div>
+        </div>
+      </section>
+
     </>
   );
 };

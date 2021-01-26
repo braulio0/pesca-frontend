@@ -68,7 +68,7 @@ const UserItem = ({
                 </td>
                 <td>
                     <form onSubmit={handleSubmit(onSubmit)}>
-                        <input type="submit" />
+                        <input className="btn btn-info" type="submit" />
                     </form>
                 </td>
             </tr>

@@ -4,14 +4,14 @@ import hola from "../constant/scrollToID";
 const ListUser = ({ data }) => {
     return (
         <>
-            <table className="table" id="home" >
-                <thead>
+            <table className="table table-hover" id="home" >
+                <thead className="thead-dark text-center">
                     <tr>
                         <th scope="col">Nombre</th>
                         <th scope="col"> Email</th>
-                        <th scope="col">Licensia</th>
-                        <th scope="col">Zona de pesca</th>
-                        <th scope="col"> Club de pesca </th>
+                        <th scope="col">Licencia</th>
+                        <th scope="col">Zona de Pesca</th>
+                        <th scope="col"> Club de Pesca </th>
                         <th scope="col">Estatus</th>
                         <th scope="col"> Responder </th>
                         <th scope="col"> Aceptar </th>

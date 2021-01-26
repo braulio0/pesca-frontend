@@ -127,8 +127,7 @@ const Login = () => {
                   name="password"
                 ></input>
               </div>
-
-
+              
               <div className="col-12 pb-5">
                 <button
                   type="submit"
@@ -144,6 +143,7 @@ const Login = () => {
                   Registrarse
                 </a>
               </div>
+
             </form>
           </main>
         </div>
