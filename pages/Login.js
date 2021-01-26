@@ -45,12 +45,12 @@ const Login = () => {
         res.data.role === "USER" &&
           router.replace({
             pathname: "/Test",
-            query: { object: JSON.stringify(datos) },
+            query: { object: JSON.stringify(datos.email) },
           });
         res.data.role === "ADMI" &&
           router.replace({
             pathname: "/Administrador",
-            query: { object: JSON.stringify(datos) },
+            query: { object: JSON.stringify(datos.email) },
           });
       })
       .catch((error) => {

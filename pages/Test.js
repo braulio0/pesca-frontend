@@ -8,7 +8,7 @@ const Test = ({ router: { query } }) => {
   const [data, setData] = useState([]);
   const [user, setUser] = useState([]);
   const apiGet = () => {
-    axios.get(`http://localhost:8080/solicitante/${object.email}`).then(
+    axios.get(`http://localhost:8080/solicitante/${object}`).then(
       (response) => {
         console.log(response.data);
         setData(response.data);
